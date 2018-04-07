@@ -18,12 +18,18 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
 public class MainActivity extends AppCompatActivity {
 
     private Button b;
     private TextView t;
     private LocationManager locationManager;
     private LocationListener listener;
+
+    DatabaseReference database;
 
 
     @Override
@@ -42,6 +48,11 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onLocationChanged(Location location) {
                 t.append("\n " + location.getLongitude() + " " + location.getLatitude());
+                FirebaseDatabase database = FirebaseDatabase.getInstance();
+                DatabaseReference myRef = database.getReference("Location");
+                //DatabaseReference myRef1 = database.getReference("Location_Longitude");
+
+                myRef.setValue(location);
             }
 
             @Override
@@ -93,8 +104,11 @@ public class MainActivity extends AppCompatActivity {
             @SuppressLint("MissingPermission")
             @Override
             public void onClick(View view) {
+
+
                 //noinspection MissingPermission
                 locationManager.requestLocationUpdates("gps", 5000, 0, listener);
+
             }
         });
     }
