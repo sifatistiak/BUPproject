@@ -47,10 +47,14 @@ public class MainActivity extends AppCompatActivity {
         listener = new LocationListener() {
             @Override
             public void onLocationChanged(Location location) {
+            //FirebaseDatabase.getInstance().setPersistenceEnabled(Boolean.parseBoolean("Location"));
                 t.append("\n " + location.getLongitude() + " " + location.getLatitude());
                 FirebaseDatabase database = FirebaseDatabase.getInstance();
+                //database.setPersistenceEnabled(true);
+
                 DatabaseReference myRef = database.getReference("Location");
                 //DatabaseReference myRef1 = database.getReference("Location_Longitude");
+
 
                 myRef.setValue(location);
             }
