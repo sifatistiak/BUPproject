@@ -1,0 +1,71 @@
+{
+  "project_info": {
+    "project_number": "524863482694",
+    "project_id": "gpstest-be928"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:524863482694:android:41ea870ec8387f33",
+        "android_client_info": {
+          "package_name": "com.test.istiak"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "524863482694-bq0kegoohhept6luor1p16supp5o7trr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBOm7nRKC2jjywfyrqs1GipvvGdpUoZM_k"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 1
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:524863482694:android:a502771e7ae0d79d",
+        "android_client_info": {
+          "package_name": "testing.gps_location"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "524863482694-bq0kegoohhept6luor1p16supp5o7trr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBOm7nRKC2jjywfyrqs1GipvvGdpUoZM_k"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 1
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
