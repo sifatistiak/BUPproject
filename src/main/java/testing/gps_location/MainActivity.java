@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
 
 
         mAdView = (AdView) findViewById(R.id.adView);
-        AdRequest adRequest = new AdRequest.Builder().addTestDevice(AdRequest.DEVICE_ID_EMULATOR).build();
+        AdRequest adRequest = new AdRequest.Builder().build();
         mAdView.loadAd(adRequest);
 
         t = (TextView) findViewById(R.id.username);
