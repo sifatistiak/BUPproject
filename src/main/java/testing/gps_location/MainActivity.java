@@ -6,6 +6,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
+
 public class MainActivity extends AppCompatActivity {
 
     private Button b;
@@ -18,20 +20,27 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
 
-        t = (TextView) findViewById(R.id.editText2);
-        t1 = (TextView) findViewById(R.id.editText);
+        t = (TextView) findViewById(R.id.username);
+        t1 = (TextView) findViewById(R.id.password);
         b = (Button) findViewById(R.id.button2);
 
 
         b.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
-                Intent intent =new Intent(MainActivity.this,MainActivity2.class);
-                startActivity(intent);
-
+                validate(t.getText().toString(),t1.getText().toString());
             }
         });
+    }
+    private void validate(String userName,String passWord){
+        if((userName.equals("bus1")) && (passWord.equals("1234"))){
+            Intent intent = new Intent(MainActivity.this, MainActivity2.class);
+            startActivity(intent);
+        }
+        else{
+            Toast.makeText(getApplicationContext(),"Incorrect/Invalid Inputs",Toast.LENGTH_SHORT).show();
+        }
+
     }
 }
 
