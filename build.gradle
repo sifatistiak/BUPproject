@@ -29,6 +29,7 @@ dependencies {
     //implementation 'com.firebaseui:firebase-ui-database:2.3.0'
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation 'com.google.firebase:firebase-ads:9.0.0'
+    implementation 'com.google.android.gms:play-services-ads:9.0.0'
     testImplementation 'junit:junit:4.12'
     //noinspection GradleCompatible
     implementation 'com.android.support:appcompat-v7:23.4.0'
