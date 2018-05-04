@@ -34,13 +34,27 @@ public class MainActivity extends AppCompatActivity {
 
     }
     private void validate(String userName, String passWord) {
-        String btext = null;
+
         if ((userName.equals("bus1")) && (passWord.equals("1234"))) {
             Intent intent = new Intent(MainActivity.this, MainActivity2.class);
             intent.putExtra("dbase","bus1");
             startActivity(intent);
 
-        } else {
+        }
+
+        if ((userName.equals("bus2")) && (passWord.equals("2345"))) {
+            Intent intent = new Intent(MainActivity.this, MainActivity2.class);
+            intent.putExtra("dbase","bus2");
+            startActivity(intent);
+
+        }
+        if ((userName.equals("bus3")) && (passWord.equals("3456"))) {
+            Intent intent = new Intent(MainActivity.this, MainActivity2.class);
+            intent.putExtra("dbase","bus3");
+            startActivity(intent);
+
+        }
+        else {
             Toast.makeText(getApplicationContext(), "Incorrect/Invalid Inputs", Toast.LENGTH_SHORT).show();
         }
 
