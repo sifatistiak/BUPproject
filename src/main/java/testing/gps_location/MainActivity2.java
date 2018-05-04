@@ -40,6 +40,7 @@ public class MainActivity2 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity2);
+        final String dbase = getIntent().getStringExtra("dbase");
 
 
         t = (TextView) findViewById(R.id.textView);
@@ -57,7 +58,7 @@ public class MainActivity2 extends AppCompatActivity {
                 FirebaseDatabase database = FirebaseDatabase.getInstance();
                 //database.setPersistenceEnabled(true);
 
-                DatabaseReference myRef = database.getReference("bus1");
+                DatabaseReference myRef = database.getReference(dbase);
                 //DatabaseReference myRef1 = database.getReference("Location_Longitude");
 
 
