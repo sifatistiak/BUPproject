@@ -117,7 +117,7 @@ public class MainActivity2 extends AppCompatActivity {
 
 
                 //noinspection MissingPermission
-                locationManager.requestLocationUpdates("gps", 5000, 0, listener);
+                locationManager.requestLocationUpdates("gps", 4000, 0, listener);
 
 
             }
